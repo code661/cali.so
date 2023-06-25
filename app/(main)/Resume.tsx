@@ -2,10 +2,9 @@ import Image, { type StaticImageData } from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
-import eightNinthsLogo from '~/assets/company/8ninths.jpeg'
-import abletiveLogo from '~/assets/company/abletive.png'
-import vvsLogo from '~/assets/company/vvs.png'
-import zolplayLogo from '~/assets/company/zolplay.png'
+import helloTalkLogo from '~/assets/company/hellotalk.png'
+import hkokLogo from '~/assets/company/hkok.png'
+import unilakeLogo from '~/assets/company/unilake.png'
 
 type Resume = {
   company: string
@@ -16,35 +15,25 @@ type Resume = {
 }
 const resume: Resume[] = [
   {
-    company: '深圳市佐玩信息技术有限公司',
-    title: '创始人 CEO',
-    logo: zolplayLogo,
+    company: '联池系统',
+    title: '前端工程师',
+    logo: unilakeLogo,
     start: '2021',
-    end: {
-      label: '至今',
-      dateTime: new Date().getFullYear(),
-    },
+    end: '2023',
   },
   {
-    company: 'very very spaceship',
-    title: '软件工程师',
-    logo: vvsLogo,
-    start: '2018',
-    end: '2020',
+    company: 'HelloTalk',
+    title: '前端工程师',
+    logo: helloTalkLogo,
+    start: '2020',
+    end: '2021',
   },
   {
-    company: '8ninths Inc.',
-    title: 'AR & 全栈工程师',
-    logo: eightNinthsLogo,
-    start: '2017',
+    company: '香不香港',
+    title: '前端工程师',
+    logo: hkokLogo,
+    start: '2020',
     end: '2018',
-  },
-  {
-    company: 'Abletive',
-    title: '创始人',
-    logo: abletiveLogo,
-    start: '2014',
-    end: '2016',
   },
 ]
 
@@ -74,7 +63,7 @@ export function Resume() {
               <Image
                 src={role.logo}
                 alt={role.company}
-                className="h-8 w-8 rounded-full"
+                className="h-8 w-8 rounded-full object-contain"
                 unoptimized
               />
             </div>

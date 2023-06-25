@@ -14,11 +14,11 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | Tan61的博客',
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'tan61,生活,个人博客,前端开发者,设计爱好者',
   themeColor: [
     { media: '(prefers-color-scheme: dark)', color: '#000212' },
     { media: '(prefers-color-scheme: light)', color: '#fafafa' },
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | Tan61',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: "Tan61's Blog",
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://tan61.life',
   },
   twitter: {
     site: '@thecalicastle',
