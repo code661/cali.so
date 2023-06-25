@@ -42,7 +42,7 @@ function OCD() {
 function Founder() {
   return (
     <motion.span className="group" whileHover="hover">
-      <UserSecurityIcon className="mr-1 inline-flex group-hover:fill-zinc-600/20 dark:group-hover:fill-zinc-200/20" />
+      <UserSecurityIcon />
       <span>新手奶爸👨‍🍼</span>
     </motion.span>
   )
