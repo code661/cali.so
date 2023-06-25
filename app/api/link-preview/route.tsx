@@ -22,11 +22,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.error()
   }
 
-  const imageUrl = new URL(`${env.LINK_PREVIEW_API_BASE_URL}/jpeg`)
+  const imageUrl = new URL(`${env.LINK_PREVIEW_API_BASE_URL}`)
   imageUrl.searchParams.set('url', url)
-  imageUrl.searchParams.set('width', width.toString())
-  imageUrl.searchParams.set('height', height.toString())
-  imageUrl.searchParams.set('ttl', '86400')
+  imageUrl.searchParams.set('cache_ttl', '86400')
 
   return new ImageResponse(
     (
