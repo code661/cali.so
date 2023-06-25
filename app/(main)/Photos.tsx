@@ -36,6 +36,8 @@ export function Photos() {
       if (window.innerWidth < 640) {
         setIsCompact(true)
         return setWidth(window.innerWidth / 2 - 64)
+      } else {
+        setIsCompact(false)
       }
 
       setWidth(window.innerWidth / images.length - 4 * images.length)
