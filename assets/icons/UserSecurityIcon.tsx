@@ -1,9 +1,8 @@
 "use client"
-import { motion } from 'framer-motion'
+import { motion,type SVGMotionProps } from 'framer-motion'
 
-import { type IconProps } from '~/assets'
 
-export function UserSecurityIcon(props: IconProps = {}) {
+export function UserSecurityIcon(props: SVGMotionProps<SVGSVGElement>) {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +12,7 @@ export function UserSecurityIcon(props: IconProps = {}) {
       variants={{hover: { scale: 1.3, rotate: [-5, 5, -5, 0, 0] }}}
       transition={{ duration: 0.3 }}
       className={props.className}
+      {...props}
     >
       <g fill="none">
         <path
