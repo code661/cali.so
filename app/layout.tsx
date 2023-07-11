@@ -73,6 +73,15 @@ export default function RootLayout({
         className={`${sansFont.variable} m-0 h-full p-0 font-sans antialiased`}
         suppressHydrationWarning
       >
+        <head>
+          {process.env.NODE_ENV === 'production' && (
+            <script
+              async
+              src="https://umami.tan61.life/script.js"
+              data-website-id="69f624e1-9db8-4173-8f3a-262ccd4a21b3"
+            ></script>
+          )}
+        </head>
         <body className="flex h-full flex-col">
           <ThemeProvider
             attribute="class"
