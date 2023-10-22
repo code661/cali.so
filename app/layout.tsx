@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Tan61's Blog",
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://tan61.life',
+    url: 'https://tan61.dev',
   },
   twitter: {
     site: '@thecalicastle',
@@ -77,7 +77,7 @@ export default function RootLayout({
           {process.env.NODE_ENV === 'production' && (
             <script
               async
-              src="https://umami.tan61.life/script.js"
+              src="https://umami.tan61.dev/script.js"
               data-website-id="69f624e1-9db8-4173-8f3a-262ccd4a21b3"
             ></script>
           )}

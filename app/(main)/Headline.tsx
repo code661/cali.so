@@ -100,12 +100,12 @@ export function Headline() {
           platform="twitter"
         />
         <SocialLink
-          href="https://aka.tan61.life/youtube"
+          href="https://aka.tan61.dev/youtube"
           aria-label="我的 YouTube"
           platform="youtube"
         />
         <SocialLink
-          href="https://aka.tan61.life/github"
+          href="https://aka.tan61.dev/github"
           aria-label="我的 GitHub"
           platform="github"
         />
@@ -116,7 +116,7 @@ export function Headline() {
         />
         <SocialLink href="/feed.xml" platform="rss" aria-label="RSS 订阅" />
         <SocialLink
-          href="mailto:hi@tan61.life"
+          href="mailto:hi@tan61.dev"
           aria-label="我的邮箱"
           platform="mail"
         />

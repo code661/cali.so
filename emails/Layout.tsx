@@ -44,7 +44,7 @@ export default function Layout({
               />
               <Text className="text-center">
                 <Link
-                  href="https://tan61.life"
+                  href="https://tan61.dev"
                   className="text-zinc-700 underline"
                 >
                   <strong>Tan61</strong>
@@ -54,21 +54,21 @@ export default function Layout({
               </Text>
               <Text className="text-center">
                 <Link
-                  href="https://aka.tan61.life/twitter"
+                  href="https://aka.tan61.dev/twitter"
                   className="text-xs text-zinc-600 underline"
                 >
                   Twitter
                 </Link>{' '}
                 |&nbsp;
                 <Link
-                  href="https://aka.tan61.life/youtube"
+                  href="https://aka.tan61.dev/youtube"
                   className="text-xs text-zinc-600 underline"
                 >
                   YouTube
                 </Link>{' '}
                 |&nbsp;
                 <Link
-                  href="https://aka.tan61.life/github"
+                  href="https://aka.tan61.dev/github"
                   className="text-xs text-zinc-600 underline"
                 >
                   GitHub
