@@ -27,7 +27,7 @@ export const getLatestBlogPostsQuery = ({
 }: GetBlogPostsOptions) =>
   groq`
   *[_type == "post" && !(_id in path("drafts.**")) && publishedAt <= "${getDate().toISOString()}"
-  && defined(slug.current)][0...${limit}] | order(publishedAt desc) {
+  && defined(slug.current)] | order(publishedAt desc)[0...${limit}] {
     _id,
     title,
     "slug": slug.current,
@@ -65,7 +65,8 @@ export const getBlogPostQuery = groq`
       _type == "image" => {
         "url": asset->url,
         "lqip": asset->metadata.lqip,
-        "dimensions": asset->metadata.dimensions
+        "dimensions": asset->metadata.dimensions,
+        ...
       }
     },
     "headings": body[length(style) == 2 && string::startsWith(style, "h")],
