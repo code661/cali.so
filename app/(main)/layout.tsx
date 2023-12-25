@@ -1,6 +1,6 @@
 import './blog/[slug]/blog.css'
 
-import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from 'react'
 
 import { Footer } from '~/app/(main)/Footer'
@@ -33,7 +33,7 @@ export default function BlogLayout({
         </div>
       </QueryProvider>
 
-      <Analytics />
+      <SpeedInsights />
     </>
   )
 }

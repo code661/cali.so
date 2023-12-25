@@ -57,7 +57,7 @@ export function Photos() {
       initial={{ opacity: 0, scale: 0.925, y: 16 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{
-        delay: 0.5,
+        duration: 0.3,
         type: 'spring',
       }}
     >
