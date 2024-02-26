@@ -58,10 +58,11 @@ export function Headline() {
       </h1>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
         <Image
+          className="dark:invert"
           src="/tan-duzhi.svg"
           alt="my name handle draw"
           width={120}
-          height={50}
+          height={23}
         />
       </p>
       <div className="mt-6 flex gap-6">
