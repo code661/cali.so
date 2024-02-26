@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Balancer from 'react-wrap-balancer'
+import Image from 'next/image'
 
 import { SparkleIcon, UserSecurityIcon } from '~/assets'
 import { SocialLink } from '~/components/links/SocialLink'
@@ -57,7 +57,12 @@ export function Headline() {
         <OCD />，<Founder />
       </h1>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-        <Balancer>我是 tan61</Balancer>
+        <Image
+          src="/tan-duzhi.svg"
+          alt="my name handle draw"
+          width={120}
+          height={50}
+        />
       </p>
       <div className="mt-6 flex gap-6">
         <SocialLink
