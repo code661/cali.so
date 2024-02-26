@@ -61,7 +61,7 @@ export function Headline() {
           className="dark:invert"
           src="/tan-duzhi.svg"
           alt="my name handle draw"
-          width={120}
+          width={150}
           height={23}
         />
       </p>
