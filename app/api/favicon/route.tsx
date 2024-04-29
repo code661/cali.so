@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
-import { ImageResponse, type NextRequest, NextResponse } from 'next/server'
+import { ImageResponse } from 'next/og'
+import { type NextRequest, NextResponse } from 'next/server'
 
 import { ratelimit, redis } from '~/lib/redis'
 
@@ -14,7 +15,8 @@ const faviconMapper: { [key: string]: string } = {
   '((?:zolplay.cn)|(?:zolplay.com)|(?:cn.zolplay.com))':
     'https://cali.so/favicons/zolplay.png',
   '(?:github.com)': 'https://cali.so/favicons/github.png',
-  '((?:t.co)|(?:twitter.com))': 'https://cali.so/favicons/twitter.png',
+  '((?:t.co)|(?:twitter.com)|(?:x.com))':
+    'https://cali.so/favicons/twitter.png',
   'coolshell.cn': 'https://cali.so/favicons/coolshell.png',
   'vercel.com': 'https://cali.so/favicons/vercel.png',
   'nextjs.org': 'https://cali.so/favicons/nextjs.png',
@@ -26,8 +28,7 @@ function getPredefinedIconForUrl(url: string): string | undefined {
       `^(?:https?:\/\/)?(?:[^@/\\n]+@)?(?:www.)?` + regexStr
     )
     if (regex.test(url)) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      return faviconMapper[regexStr]!
+      return faviconMapper[regexStr]
     }
   }
 
