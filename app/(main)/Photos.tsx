@@ -4,28 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 
-import image1 from '~/assets/highlights/highlight-dali.jpeg'
-import image2 from '~/assets/highlights/highlight-diving.jpeg'
-import image3 from '~/assets/highlights/highlight-father.jpeg'
-import image4 from '~/assets/highlights/highlight-game.jpeg'
-import image5 from '~/assets/highlights/highlight-jetbrain-conf.jpeg'
-import image6 from '~/assets/highlights/highlight-laker.jpeg'
-import image7 from '~/assets/highlights/highlight-workspace.jpeg'
-import image8 from '~/assets/highlights/highlight-world-cup.jpeg'
-
-const images = [image1, image2, image3, image4, image5, image6, image7, image8]
-const alts = [
-  '大理苍山',
-  '在泰国兰塔岛潜水',
-  '和女儿的合照',
-  '和老婆一起玩双人成行',
-  '参加 jetbrain 的 conference',
-  '在东江湖旅游',
-  '我的书桌',
-  '观看男篮世界杯'
-]
-
-export function Photos() {
+export function Photos({ photos }: { photos: string[] }) {
   const [width, setWidth] = React.useState(0)
   const [isCompact, setIsCompact] = React.useState(false)
   const expandedWidth = React.useMemo(() => width * 1.38, [width])
@@ -57,7 +36,7 @@ export function Photos() {
       initial={{ opacity: 0, scale: 0.925, y: 16 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{
-        duration: 0.3,
+        delay: 0.5,
         type: 'spring',
       }}
     >

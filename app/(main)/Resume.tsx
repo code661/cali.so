@@ -2,51 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
-import helloTalkLogo from '~/assets/company/hellotalk.png'
-import hkokLogo from '~/assets/company/hkok.png'
-import unilakeLogo from '~/assets/company/unilake.png'
 
 type Resume = {
   company: string
   title: string
-  start: string | { label: string; dateTime: number }
-  end: string | { label: string; dateTime: number }
-  logo: StaticImageData
-}
-const resume: Resume[] = [
-  {
-    company: '联池系统',
-    title: '前端工程师',
-    logo: unilakeLogo,
-    start: '2021',
-    end: '2023',
-  },
-  {
-    company: 'HelloTalk',
-    title: '前端工程师',
-    logo: helloTalkLogo,
-    start: '2020',
-    end: '2021',
-  },
-  {
-    company: '香不香港',
-    title: '前端工程师',
-    logo: hkokLogo,
-    start: '2020',
-    end: '2018',
-  },
-]
-
-function getRoleDate(date: Resume['start'] | Resume['end'], label = true) {
-  if (typeof date === 'string') {
-    return date
-  }
-
-  if (label) {
-    return date.label
-  } else {
-    return String(date.dateTime)
-  }
+  start: string
+  end?: string | null
+  logo: string
 }
 
 export function Resume({ resume }: { resume: Resume[] }) {
@@ -63,7 +25,9 @@ export function Resume({ resume }: { resume: Resume[] }) {
               <Image
                 src={role.logo}
                 alt={role.company}
-                className="h-8 w-8 rounded-full object-contain"
+                className="h-8 w-8 rounded-full"
+                width={100}
+                height={100}
                 unoptimized
               />
             </div>
